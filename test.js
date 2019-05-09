@@ -70,7 +70,7 @@ function card(cocktailsName){ //parametre olarak cocktails ismini gönder
     
     var cardTitle = document.createElement('h5');
     cardTitle.className = 'card-title';
-    cardTitle.textContent = 'Cosmopolitan'; // isim bilgisini parametre üzerinden çek
+    cardTitle.textContent = cocktailsName; // isim bilgisini parametre üzerinden çek
     cardBody.appendChild(cardTitle);
     
     flipCardFront.appendChild(cocktailsIMG);
@@ -88,7 +88,7 @@ function card(cocktailsName){ //parametre olarak cocktails ismini gönder
     alcoholElement.textContent = '1.5 Lime Juice, 1.5 Cointreau, 3 Cranberry Juice, 4 Vodka'; 
     var backCardTitle = document.createElement('h5');
     backCardTitle.className = 'card-title border-top';
-    backCardTitle.textContent = 'Cosmopolitan'; // isim bilgisini parametre üzerinden çek
+    backCardTitle.textContent = cocktailsName; // isim bilgisini parametre üzerinden çek
     
     
 
@@ -99,6 +99,9 @@ function card(cocktailsName){ //parametre olarak cocktails ismini gönder
     flipCardInner.appendChild(flipCardBack);
     
     document.body.append(card);
-    
-    
-}
+     
+    return '';
+   
+}    
+     
+card('cosmopolitan');
